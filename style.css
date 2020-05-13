@@ -1,0 +1,257 @@
+/* CSS reset */
+*, *:before, *:after { 
+  margin:0;
+  padding:0;
+  font-family: Arial,sans-serif;
+}
+ 
+/* remove a linha dos links */
+a{
+  text-decoration: none;
+}
+ 
+/* esconde as ancoras da tela */
+a.links{
+  display: none;
+}
+.content{
+  width: 500px;
+  min-height: 560px;    
+  margin: 0px auto;
+  position: relative;   
+}
+h1{
+  font-size: 48px;
+  color: #191970;
+  padding: 2px 0 10px 0;
+  font-family: Arial,sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+}
+h1:after{
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 10px;
+}
+
+h2{
+  font-size: 20px;
+  color: #191970;
+  padding: 2px 0 10px 0;
+  font-family: Gill Sans, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+}
+h2:after{
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 10px;
+
+  /*os dois background a baixo é as linhas decorativas de cima a baixo dos nomes LOGIN/CADASTRO*/
+  background: -webkit-linear-gradient(left, rgba(147,184,189,0) 0%, #FF8C00 20%,#191970 53%, #FF8C00 79%,rgba(147,184,189,0) 100%); 
+  background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+}
+p{
+  margin-bottom:15px;
+}
+ 
+.content p:first-child{
+  margin: 0px;
+}
+ 
+label{
+  color: #405c60; /*cor dos nomes acima das caixas de preenchimento*/
+  position: relative;
+}
+/* placeholder/ preenchimento exemplo das caixas */
+::-webkit-input-placeholder  {
+  color: #bebcbc; /*cor dos nomes do preenchimento*/
+  font-style: italic;
+}
+ 
+input:-moz-placeholder,
+textarea:-moz-placeholder{
+  color: #bebcbc;
+  font-style: italic;
+}
+input {
+  outline: none;
+}
+ 
+/*estilo dos input,  menos o checkbox */
+input:not([type="checkbox"]){
+  width: 95%; /* largura dos quadros de peenchimento */
+  margin-top: 4px; /* espaço entre os quadros de peenchimento */
+  padding: 10px;  /* tamanho dos quadros de preenchimento */  
+  border: 1px solid #b2b2b2; /* cor e tamanho das bordas dos quadrados de preenchimento */
+ 
+  -webkit-border-radius: 3px; /* formato dos quadros de peenchimento */
+  border-radius: 3px; 
+ 
+ /*cores das sombras das caixas de peenchimento*/
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+  box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset; 
+ 
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+ 
+/*estilo do botão submit */
+input[type="submit"]{
+  width: 100%!important;
+  cursor: pointer;  
+  background: #191970; /*cor da caixa do botam de cadastrar/entrar*/
+  padding: 8px 5px;
+  color: #fff; /* cor do nome cadastro/entrar */
+  font-size: 20px;  
+  border: 1px solid #fff; /* cor da borda do botão cadastro/entrar */   
+  margin-bottom: 10px;  
+  text-shadow: 0 1px 1px #333;
+ 
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+ 
+  transition: all 0.2s linear;
+}
+ 
+/*estilo do botão submit no hover */
+input[type="submit"]:hover{
+  background: #6495ED; /* cor do precionamento dos botons de entar e cadastrar */
+}
+.link{
+  position: absolute;
+  background: #e1eaeb; /* cor do rodapé do quadro de cadastro e login*/
+  color: #7f7c7c; /* cor da frase "já tem conta?"  */
+  left: 0px;
+  height: 20px;
+  width: 440px;
+  padding: 17px 30px 20px 30px;
+  font-size: 16px;
+  text-align: right;
+  border-top: 1px solid #dbe5e8; /*cor da linha de divisão do rodapé da caixa do formulario*/
+ 
+  -webkit-border-radius: 0 0  5px 5px;
+  border-radius: 0 0  5px 5px;
+}
+ 
+.link a {
+  font-weight: bold; /* estilo negrito do nome Ir para login*/
+  background: #f7f8f1;  /* cor da caixa "cadastre-se" */
+  padding: 6px;
+  color:  #191970; /* cor do nome "cadastre-se" */
+  margin-left: 10px;
+  border: 1px solid #F4A460 ; /* cor da borda de dentro da caixa  "cadastre-se" */
+ 
+  -webkit-border-radius: 4px;
+  border-radius: 4px;  
+ 
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s  linear;
+}
+ 
+.link a:hover {
+  color: #F4A460; /*cor do nome de precionamento da caixa cadastre-se*/
+  background: #f7f7f7; /*cor do precionamento da caixa cadastre-se*/
+  border: 1px solid #191970; /* cor da borda de dentro da caixa "cadastre-se" quando presionada*/
+}
+#cadastro, 
+#login{
+  position: absolute;
+  top: 70px; /* posicionamento da caixa de cadastro */
+  width: 88%;   
+  padding: 18px 6% 60px 6%;
+  margin: 0 0 35px 0;
+  background: #f7f7f7; /*cor da caixa inteira do formulario*/
+  border: 2px solid #F4A460; /*cor/tamanho da borda da caixa inteira do formulario*/
+   
+  -webkit-box-shadow: 5px;
+  border-radius: 5px;
+   
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+ 
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+/* Efeito ao clicar no botão ( Ir para Login ) */
+#potiporacadastro:target ~ .content #cadastro,
+#potiporalogin:target ~ .content #login{
+  z-index: 2;
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+ 
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s;
+}
+ 
+/* Efeito ao clicar no botão ( Cadastre-se ) */
+#registro:target ~ .content #login,
+#potiporalogin:target ~ .content #cadastro{
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+/*fadeInLeft*/
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+ 
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+ 
+/*fadeOutLeft*/
+@-webkit-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+}
+ 
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+body{
+  background-color: #000857;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+   
+}
+  
+}
+ 
+ 
