@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
   <meta charset="UTF-8" />
   <title>Potiporã - Solicitação de Serviços</title>
@@ -68,8 +69,13 @@
           <p> 
             <label for="senha_cad">Sua senha</label>
             <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="ex.1234"/>
+            <button type="button" onclick="mostrarSenha()"><img src="imag/imag3.png" width="40%"height="20%"></button>
+            
+            
           </p>
            
+
+
           <p> 
             <input type="submit" value="Cadastrar"/> 
           </p>
@@ -78,9 +84,21 @@
             Já tem conta?
             <a href="#potiporalogin"> Ir para Login </a>
           </p>
+
         </form>
       </div>
     </div>
-  </div>  
+  </div> 
+        <script>
+          function mostrarSenha() {
+            var tipo = document.getElementById("senha_cad");
+            if(tipo.type == "password"){
+              tipo.type = "text";
+
+            }else{
+              tipo.type = "password";
+            }
+          }
+         </script> 
 </body>
 </html>
