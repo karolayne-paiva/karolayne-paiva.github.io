@@ -89,7 +89,7 @@ input:not([type="checkbox"]){
 input[type="submit"]{
   width: 100%!important;
   cursor: pointer;  
-  background: #191970; /*cor da caixa do botam de cadastrar/entrar*/
+  background: #000067; /*cor da caixa do botão de cadastrar/entrar*/
   padding: 8px 5px;
   color: #fff; /* cor do nome cadastro/entrar */
   font-size: 20px;  
@@ -250,12 +250,18 @@ button[type="button"]:hover{
 }
 
 body{
-  background-color: #000857;
+  
+  background-image: linear-gradient(to top,#000067, #000075, #000082, #000091, #00009f, #0007a1, #000ea3, #0014a5, #001b9a, #00208f, #002384, #002578);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  
+  /*background-color: #000857;
   background-image: url("");
   background-repeat: no-repeat;
   background-size: auto;
   background-attachment: scroll;
-  background-position: 0px 90px;
+  background-position: 0px 90px;*/
   
 }
   
